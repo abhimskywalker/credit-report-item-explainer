@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Report Loans Explained</title>
+  <meta name="description" content="Find out who created the loan entries on your Credit Report">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1>Loan providers & associated apps/entities</h1>
+  <input autofocus type="text" id="myInput" onkeyup="myFunction()" autofocus
+    placeholder="Search by name you see in your Credit Report">
+  <table id="myTable">
+    <thead>
+      <tr class="header">
+        <th>Loan Provider Name</th>
+        <th>Associated app/entity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>CapFloat Financial Services</td>
+        <td>Amazon Pay Later</td>
+      </tr>
+      <tr>
+        <td>Karur Vysya Bank.</td>
+        <td>Amazon Pay Later</td>
+      </tr>
+      <tr>
+        <td>IDFC First Bank Ltd.</td>
+        <td>Amazon Pay Later</td>
+      </tr>
+      <tr>
+        <td>IDFC First Bank Ltd.</td>
+        <td>Flipkart Pay Later</td>
+      </tr>
+      <tr>
+        <td>Clix Finance India Pvt. Ltd.</td>
+        <td>PayTM Postpaid</td>
+      </tr>
+      <tr>
+        <td>Aditya Birla Finance Ltd.</td>
+        <td>PayTM Postpaid</td>
+      </tr>
+      <tr>
+        <td>Aditya Birla Finance Ltd.</td>
+        <td>OlaMoney Postpaid</td>
+      </tr>
+      <tr>
+        <td>IDFC First Bank Ltd.</td>
+        <td>Mobikwik</td>
+      </tr>
+      <tr>
+        <td>IDFC First Bank Ltd.</td>
+        <td>CRED Stash</td>
+      </tr>
+      <tr>
+        <td>PayU Finance.</td>
+        <td>LazyPay</td>
+      </tr>
+      <tr>
+        <td>ICICI Bank.</td>
+        <td>Simpl</td>
+      </tr>
+      <tr>
+        <td>Jalan Chemical Industries Pvt Ltd.</td>
+        <td>MPockket</td>
+      </tr>
+      <tr>
+        <td>SBM Bank.</td>
+        <td>Postpe</td>
+      </tr>
+      <tr>
+        <td>Hindon Mercantile.</td>
+        <td>Bharatpe</td>
+      </tr>
+      <tr>
+        <td>InCred</td>
+        <td>ZestMoney</td>
+      </tr>
+      <tr>
+        <td>DMI Finance</td>
+        <td>ZestMoney</td>
+      </tr>
+      <tr>
+        <td>Nahar</td>
+        <td>ZestMoney</td>
+      </tr>
+      <tr>
+        <td>DMI Finance Private Limited</td>
+        <td>Slice</td>
+      </tr>
+      <tr>
+        <td>Quadrillion Finance Private Limited</td>
+        <td>Slice</td>
+      </tr>
+      <tr>
+        <td>Fairassets Technologies India Private Limited</td>
+        <td>Slice</td>
+      </tr>
+      <tr>
+        <td>Aphelion Finance Private Limited</td>
+        <td>Slice</td>
+      </tr>
+      <tr>
+        <td>Northern Arc Capital Limited</td>
+        <td>Slice</td>
+      </tr>
+      <tr>
+        <td>Vivriti Capital Private Limited</td>
+        <td>Slice</td>
+      </tr>
+      <tr>
+        <td>Axis Bank.</td>
+        <td>Freecharge Pay Later </td>
+      </tr>
+      <tr>
+        <td>NDXP.</td>
+        <td>UniCard </td>
+      </tr>
+      <tr>
+        <td>AKARACAPL.</td>
+        <td>StashFin </td>
+      </tr>
+      <tr>
+        <td>WHIZDM Finance.</td>
+        <td>MoneyView </td>
+      </tr>
+      <tr>
+        <td>DMI Finance.</td>
+        <td>Red Carpet </td>
+      </tr>
+      <tr>
+        <td>Kissht</td>
+        <td>SI Creva Capital </td>
+      </tr>
+      <tr>
+        <td>Branch</td>
+        <td>Branch International </td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    window.onload = function () {
+      var inputFocus = document.getElementById("myInput").focus();
+    }
+  </script>
+</body>
+
+</html>
